@@ -23,3 +23,8 @@ def second_anagram?(str1, str2)
     str2_arr.empty?
 end
   
+def third_anagram?(str1, str2)
+    str1.split("").sort == str2.split("").sort
+end 
+
+

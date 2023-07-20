@@ -59,11 +59,3 @@ def largest_contiguous_subsum_ph2(list)   #O(n)
 
     return current_sum
 end
-
-
-
-
-
-
-
-
