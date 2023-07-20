@@ -29,7 +29,7 @@ end
 
 
 def largest_contiguous_subsum(list)  # O(n^3)
-    arr = [] #O(n)
+    arr = [] #O(1)
 
     (0...list.length).each do |start_idx| #O(n)
         (start_idx...list.length).each do |end_idx| #O(n) 
