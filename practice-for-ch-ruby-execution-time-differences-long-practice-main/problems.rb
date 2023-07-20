@@ -1,12 +1,15 @@
 def my_min(arr)
 
-    small_val = 0   # starts with the biggest num in the arr
+    small_val = arr[0]  
+     
     arr.each_with_index do |el, idx1|
         arr.each_with_index do |el2, idx2|
-            if el < el2 && idx2 > idx1
-                small_val = arr[idx1]
-            else 
-                small_val = arr[idx2]
+            if idx2 > idx1 
+                if el2 > el && small_val > el
+                    small_val = el
+                elsif el2 < el && small_val > el2
+                    small_val = el2
+                end 
             end 
         end 
     end 
