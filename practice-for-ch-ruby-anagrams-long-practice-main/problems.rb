@@ -10,17 +10,16 @@ end
 def second_anagram?(str1, str2)
     str2_arr = str2.split("")
     str1.each_char do |char|
+    # debugger
       if !str2_arr.find_index(char).nil?
         idx = str2_arr.find_index(char)
-        str2_arr.delete(idx)
-      elsif str2_arr.empty?
-        return true
+        str2_arr.delete_at(idx)
+    #   elsif str2_arr.empty?
+    #     return true
       else
         false
       end
-  
     end
-  
-  
-  end
+    str2_arr.empty?
+end
   
