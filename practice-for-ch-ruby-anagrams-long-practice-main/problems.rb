@@ -28,3 +28,14 @@ def third_anagram?(str1, str2)
 end 
 
 
+def fourth_anagram?(str1, str2)
+    hash1 = Hash.new(0)
+    hash2 = Hash.new(0)
+
+    str1.each_char {|el| hash1[el] += 1}
+    str2.each_char {|el| hash2[el] += 1}
+
+    hash1 == hash2
+end 
+
+p fourth_anagram?("listen", "silent")
